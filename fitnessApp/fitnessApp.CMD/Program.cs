@@ -7,7 +7,7 @@ namespace fitnessApp.CMD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Вас приветствует приложения fitnessApp");
+            Console.WriteLine("Вас приветствует приложение fitnessApp");
 
             Console.WriteLine("Введите имя пользователя");
             var name = Console.ReadLine();
@@ -51,14 +51,14 @@ namespace fitnessApp.CMD
         {
             while (true)
             {
-                Console.WriteLine($"Введите {name}: ");
+                Console.WriteLine($"Введите {name}а: ");
                 if (double.TryParse(Console.ReadLine(), out double value))
                 {
                     return value;
                 }
                 else
                 {
-                    Console.WriteLine($"Неверный формат {name}!");
+                    Console.WriteLine($"Неверный формат {name}а!");
                 }
             }
         }
