@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
-
 namespace fitnessApp.BL.Model
 {
     /// <summary>
@@ -33,7 +33,7 @@ namespace fitnessApp.BL.Model
                 throw new ArgumentNullException(nameof(name), "Имя не может быть пустым или NULL!");
             if (gender == null)
                 throw new ArgumentNullException(nameof(gender), "Пол не может быть NULL!");
-            if (birthDate < DateTime.Parse("01.01.1926") || birthDate > DateTime.Now)
+            if (birthDate < DateTime.Parse("1926, 1, 1") || birthDate > DateTime.Now)
                 throw new ArgumentOutOfRangeException(nameof(birthDate), "Невозможная дата рождения!");
             if (weight < 0 || weight > 1000)
                 throw new ArgumentOutOfRangeException(nameof(weight), "Неверное значение веса!");
@@ -47,6 +47,10 @@ namespace fitnessApp.BL.Model
             Height = height;
             BirthDate = birthDate;
             #endregion 
+        }
+        public User()
+        {
+
         }
         public override string ToString()
         {

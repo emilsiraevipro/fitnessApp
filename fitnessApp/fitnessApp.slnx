@@ -1,1 +1,4 @@
-<Solution />
+<Solution>
+  <Project Path="fitnessApp.BL/fitnessApp.BL.csproj" />
+  <Project Path="fitnessApp.CMD/fitnessApp.CMD.csproj" />
+</Solution>

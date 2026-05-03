@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace fitnessApp.BL.Model
@@ -8,8 +9,8 @@ namespace fitnessApp.BL.Model
     /// Пол
     /// </summary>
     public class Gender
-    { 
-        public string Name { get; }  
+    {
+        public string Name { get; }
         public Gender(string name)
         {
             if (string.IsNullOrWhiteSpace(name)) 
