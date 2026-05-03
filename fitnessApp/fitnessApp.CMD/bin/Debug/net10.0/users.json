@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "Name": "Pavel",
+    "Gender": {
+      "Name": "мужской"
+    },
+    "BirthDate": "2001-07-18T00:00:00",
+    "Weight": 173,
+    "Height": 71,
+    "Age": 24
+  }
+]

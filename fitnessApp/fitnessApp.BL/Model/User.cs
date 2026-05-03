@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
+using System.Text.Json.Serialization;
 namespace fitnessApp.BL.Model
 {
     /// <summary>
@@ -14,14 +15,26 @@ namespace fitnessApp.BL.Model
         /// <summary>
         /// Пол.
         /// </summary>
-        public Gender Gender { get; }
+        public Gender Gender { get; set; }
         /// <summary>
         /// Дата рождения.
         /// </summary>
         public DateTime BirthDate { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
+        public int Age 
+        { 
+            get 
+            {
+                DateTime nowDate = DateTime.Today;
+                int age = nowDate.Year - BirthDate.Year;
+                if (BirthDate > nowDate.AddYears(-age)) 
+                    age--;
+                return age;
+            } 
+        }
         #endregion
+        
         public User(string name, 
                     Gender gender, 
                     DateTime birthDate, 
@@ -48,17 +61,18 @@ namespace fitnessApp.BL.Model
             BirthDate = birthDate;
             #endregion 
         }
-
+        [JsonConstructor]
         public User(string name)
         {
             if(string.IsNullOrWhiteSpace(name)) 
                 throw new ArgumentNullException(nameof(name), "НУЛЬ!!!!");
             Name = name;
         }
+        public User() { }
 
         public override string ToString()
         {
-            return Name;
+            return Name + " " + Age;
         }
     }
 }

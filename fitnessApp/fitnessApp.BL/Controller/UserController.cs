@@ -16,23 +16,26 @@ namespace fitnessApp.BL.Controller
         /// <summary>
         /// Пользователь приложения
         /// </summary>
-        public List<User> Users { get; } = new List<User>();
+        public List<User> Users { get; set; }
         public User CurrentUser { get; }
+        public bool IsNewUser { get; } = false;
         public UserController(string userName)
         {
             if(string.IsNullOrWhiteSpace(userName)) 
                 throw new ArgumentNullException(nameof(userName), "Имя пользователя не может быть пустым");
-
             Users = GetUsersData();
             CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
 
             if(CurrentUser == null)
             {
                 CurrentUser = new User(userName);
+                Users.Add(CurrentUser);
+                IsNewUser = true;
+                Save();
             }
         }
         /// <summary>
-        /// Получить данные пользователя.
+        /// Получить сохраненный список пользователей
         /// </summary>
         /// <returns>Пользователь приложения</returns>
         /// <exception cref="FileLoadException"></exception>
@@ -46,6 +49,17 @@ namespace fitnessApp.BL.Controller
                 Console.WriteLine("Чтение данных из файла завершено!");
                 return users;
             }
+        }
+
+        public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
+        {
+            // Проверка
+
+            CurrentUser.Gender = new Gender(genderName);
+            CurrentUser.BirthDate = birthDate;
+            CurrentUser.Weight = weight;
+            CurrentUser.Height = height;
+            Save();
         }
         /// <summary>
         /// Сохранить данные пользователя.
