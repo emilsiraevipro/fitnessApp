@@ -48,10 +48,14 @@ namespace fitnessApp.BL.Model
             BirthDate = birthDate;
             #endregion 
         }
-        public User()
-        {
 
+        public User(string name)
+        {
+            if(string.IsNullOrWhiteSpace(name)) 
+                throw new ArgumentNullException(nameof(name), "НУЛЬ!!!!");
+            Name = name;
         }
+
         public override string ToString()
         {
             return Name;

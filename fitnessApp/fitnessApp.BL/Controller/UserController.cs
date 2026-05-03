@@ -16,34 +16,51 @@ namespace fitnessApp.BL.Controller
         /// <summary>
         /// Пользователь приложения
         /// </summary>
-        public User User { get; }
-        public UserController(string userName, string genderName, DateTime birthDate, double weight, double height)
+        public List<User> Users { get; } = new List<User>();
+        public User CurrentUser { get; }
+        public UserController(string userName)
         {
-            //TODO: Проверка
-            var gender = new Gender(genderName);
-            User = new User(userName, gender, birthDate, weight, height);
+            if(string.IsNullOrWhiteSpace(userName)) 
+                throw new ArgumentNullException(nameof(userName), "Имя пользователя не может быть пустым");
+
+            Users = GetUsersData();
+            CurrentUser = Users.SingleOrDefault(u => u.Name == userName);
+
+            if(CurrentUser == null)
+            {
+                CurrentUser = new User(userName);
+            }
         }
         /// <summary>
         /// Получить данные пользователя.
         /// </summary>
         /// <returns>Пользователь приложения</returns>
         /// <exception cref="FileLoadException"></exception>
-        public UserController()
+        private List<User> GetUsersData()
         {
+            if (!File.Exists("users.json") || new FileInfo("users.json").Length == 0) 
+                return new List<User>();
             using (var file = new FileStream("users.json", FileMode.OpenOrCreate))
             {
-                 JsonSerializer.DeserializeAsync<User>(file);
+                var users = JsonSerializer.Deserialize<List<User>>(file);
+                Console.WriteLine("Чтение данных из файла завершено!");
+                return users;
             }
-            //TODO: что делать, если пользователя не прочитали?
         }
         /// <summary>
         /// Сохранить данные пользователя.
         /// </summary>
-        async public void Save()
+        public void Save()
         {
             using (var file = new FileStream("users.json", FileMode.OpenOrCreate))
             {
-               await JsonSerializer.SerializeAsync<User>(file, User, new JsonSerializerOptions { WriteIndented = true, AllowTrailingCommas = true, Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic)});
+                JsonSerializer.Serialize<List<User>>(file, Users, new JsonSerializerOptions 
+                { 
+                    WriteIndented = true, 
+                    AllowTrailingCommas = true, 
+                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic)
+                });
+                Console.WriteLine("Данные были записаны в файл");
             }
         }
     }
