@@ -11,8 +11,9 @@ namespace fitnessApp.BL.Controller
     /// <summary>
     /// Контроллер пользователя
     /// </summary>
-    public class UserController
+    public class UserController: ControllerBase
     {
+        private const string USERS_FILE_NAME = "users.json";
         /// <summary>
         /// Пользователь приложения
         /// </summary>
@@ -34,6 +35,11 @@ namespace fitnessApp.BL.Controller
                 Save();
             }
         }
+
+        public UserController()
+        {
+        }
+
         /// <summary>
         /// Получить сохраненный список пользователей
         /// </summary>
@@ -41,14 +47,7 @@ namespace fitnessApp.BL.Controller
         /// <exception cref="FileLoadException"></exception>
         private List<User> GetUsersData()
         {
-            if (!File.Exists("users.json") || new FileInfo("users.json").Length == 0) 
-                return new List<User>();
-            using (var file = new FileStream("users.json", FileMode.OpenOrCreate))
-            {
-                var users = JsonSerializer.Deserialize<List<User>>(file);
-                Console.WriteLine("Чтение данных из файла завершено!");
-                return users;
-            }
+            return Load<List<User>>(USERS_FILE_NAME) ?? new List<User>();
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
@@ -66,16 +65,7 @@ namespace fitnessApp.BL.Controller
         /// </summary>
         public void Save()
         {
-            using (var file = new FileStream("users.json", FileMode.OpenOrCreate))
-            {
-                JsonSerializer.Serialize<List<User>>(file, Users, new JsonSerializerOptions 
-                { 
-                    WriteIndented = true, 
-                    AllowTrailingCommas = true, 
-                    Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic)
-                });
-                Console.WriteLine("Данные были записаны в файл");
-            }
+            Save(USERS_FILE_NAME, Users);
         }
     }
 }
