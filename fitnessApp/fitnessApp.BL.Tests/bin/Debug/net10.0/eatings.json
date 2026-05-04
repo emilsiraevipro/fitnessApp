@@ -1,0 +1,23 @@
+{
+  "Moment": "2026-05-04T20:21:08.5584033Z",
+  "Foods": [
+    {
+      "Food": {
+        "Name": "8b787abc-62a4-48ed-a902-fc371d507252",
+        "Proteins": 2.95,
+        "Fats": 1.8,
+        "Carbohydrates": 3.09,
+        "Calorries": 3.11
+      },
+      "Weight": 100
+    }
+  ],
+  "User": {
+    "Name": "56c7b230-2cfe-4eba-aad6-8540cd2a3972",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  }
+}

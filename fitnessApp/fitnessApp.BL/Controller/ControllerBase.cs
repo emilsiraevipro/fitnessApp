@@ -24,7 +24,7 @@ namespace fitnessApp.BL.Controller
                 Console.WriteLine("Данные были записаны в файл");
             }
         }
-        protected T Load<T>(string fileName) 
+        protected T? Load<T>(string fileName) 
         {
             if (!File.Exists(fileName) || new FileInfo(fileName).Length == 0)
                 return default(T);

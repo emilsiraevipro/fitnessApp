@@ -11,26 +11,26 @@ namespace fitnessApp.BL.Tests
     public class Eating
     {
         public DateTime Moment { get; }
-        public Dictionary<Food, double> Foods { get; }
+        public List<FoodItem> Foods { get; }
         public User User { get; }
         public Eating(User user)
         {
             User = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
             Moment = DateTime.UtcNow;
-            Foods = new Dictionary<Food, double>();
+            Foods = new List<FoodItem>();
         }
 
-        public void Add(Food food, double weight)
+        public void Add(FoodItem food)
         {
-            var product = Foods.Keys.FirstOrDefault(f => f.Name.Equals(food.Name));
+            var product = Foods.FirstOrDefault(f => f.Food.Name.Equals(food.Food.Name));
 
             if (product == null)
             {
-                Foods.Add(food, weight);
+                Foods.Add(food);
             }
             else
             {
-                Foods[product] += weight;
+                product.Weight += food.Weight;
             }
         }
     }

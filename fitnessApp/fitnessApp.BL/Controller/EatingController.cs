@@ -26,18 +26,18 @@ namespace fitnessApp.BL.Controller
         {
         }
 
-        public void Add(Food food, double weight)
+        public void Add(FoodItem food )
         {
-            var product = Foods.SingleOrDefault(f => f.Name == food.Name);
+            var product = Foods.SingleOrDefault(f => f.Name == food.Food.Name);
             if(product == null)
             {
-                Foods.Add(food);
-                Eating.Add(food, weight);
+                Foods.Add(food.Food);
+                Eating.Add(food);
                 Save();
             }
             else
             {
-                Eating.Add(product, weight);
+                Eating.Add(food);
                 Save();
             }
         }
