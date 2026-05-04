@@ -1,2 +1,4 @@
 .vs/
-.json/
+.*
+*.json
+.*json
