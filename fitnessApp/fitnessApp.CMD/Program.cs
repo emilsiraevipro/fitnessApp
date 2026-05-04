@@ -1,5 +1,6 @@
 ﻿using fitnessApp.BL.Controller;
 using fitnessApp.BL.Model;
+using fitnessApp.BL.Tests;
 
 namespace fitnessApp.CMD
 {
@@ -13,6 +14,7 @@ namespace fitnessApp.CMD
             var name = Console.ReadLine();
 
             var userController = new UserController(name);
+            var eatingController = new EatingController(userController.CurrentUser);
             if (userController.IsNewUser)
             {
                 Console.WriteLine("Введите пол:");
@@ -25,8 +27,40 @@ namespace fitnessApp.CMD
             }
 
             Console.WriteLine(userController.CurrentUser);
+
+            Console.WriteLine("Что вы хотите сделать?");
+            Console.WriteLine("E - ввести прием пищи");
+            var key = Console.ReadKey();
+            if(key.Key == ConsoleKey.E)
+            {
+                var foods = EnterEAting();
+                eatingController.Add(foods);
+                foreach (var item in eatingController.Eating.Foods)
+                { 
+                    Console.WriteLine($"{item.Food} - {item.Weight}");
+                }
+            }
+
             Console.ReadLine();
 
+        }
+
+        private static FoodItem EnterEAting()
+        {
+            Console.WriteLine("Введите имя продукта:");
+            var food = Console.ReadLine();
+
+            var calloriels = ParseDouble("калории");
+            var proteins = ParseDouble("белки ");
+            var fats = ParseDouble("жиры");
+            var carbohydrates = ParseDouble("углеводы");
+
+
+            Console.WriteLine("Введите вес порции:");
+            var weight = ParseDouble("вес порции");
+            var product = new Food(food, proteins, fats, carbohydrates, calloriels);
+
+            return new FoodItem(product, weight);
         }
 
         private static DateTime ParseDateTime()
@@ -58,7 +92,7 @@ namespace fitnessApp.CMD
                 }
                 else
                 {
-                    Console.WriteLine($"Неверный формат {name}а!");
+                    Console.WriteLine($"Неверный формат поля {name}а!");
                 }
             }
         }

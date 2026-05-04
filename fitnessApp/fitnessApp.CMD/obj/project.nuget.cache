@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "H2dku9ZUkVc=",
+  "dgSpecHash": "1/7ew7h8GIc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Эмиль\\Desktop\\fitnessApp\\fitnessApp\\fitnessApp.CMD\\fitnessApp.CMD.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Эмиль\\.nuget\\packages\\system.valuetuple\\4.6.2\\system.valuetuple.4.6.2.nupkg.sha512"
+  ],
   "logs": []
 }

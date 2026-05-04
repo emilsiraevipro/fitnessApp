@@ -5,5 +5,19 @@
     "Fats": 1.8,
     "Carbohydrates": 3.09,
     "Calorries": 3.11
+  },
+  {
+    "Name": "dbe01cb0-3f72-4cc1-8097-b2b0d99cf9a5",
+    "Proteins": 3.92,
+    "Fats": 2.81,
+    "Carbohydrates": 2.53,
+    "Calorries": 3.21
+  },
+  {
+    "Name": "cb697aa6-53f6-4c57-9df0-97eedb1ef47f",
+    "Proteins": 4.61,
+    "Fats": 0.58,
+    "Carbohydrates": 1.93,
+    "Calorries": 1.69
   }
 ]

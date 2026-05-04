@@ -1,13 +1,13 @@
 {
-  "Moment": "2026-05-04T20:21:08.5584033Z",
+  "Moment": "2026-05-04T21:16:50.8043879Z",
   "Foods": [
     {
       "Food": {
-        "Name": "8b787abc-62a4-48ed-a902-fc371d507252",
-        "Proteins": 2.95,
-        "Fats": 1.8,
-        "Carbohydrates": 3.09,
-        "Calorries": 3.11
+        "Name": "cb697aa6-53f6-4c57-9df0-97eedb1ef47f",
+        "Proteins": 4.61,
+        "Fats": 0.58,
+        "Carbohydrates": 1.93,
+        "Calorries": 1.69
       },
       "Weight": 100
     }

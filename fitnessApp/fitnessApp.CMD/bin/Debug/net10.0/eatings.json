@@ -1,0 +1,26 @@
+{
+  "Moment": "2026-05-04T21:51:07.2888375Z",
+  "Foods": [
+    {
+      "Food": {
+        "Name": "бдбд",
+        "Proteins": 0.78,
+        "Fats": 0.78,
+        "Carbohydrates": 0.78,
+        "Calorries": 0.78
+      },
+      "Weight": 78
+    }
+  ],
+  "User": {
+    "Name": "vfymzr",
+    "Gender": {
+      "Name": "муж"
+    },
+    "BirthDate": "2000-12-12T00:00:00",
+    "Weight": 155,
+    "Height": 155,
+    "Age": 25
+  }
+}}
+}

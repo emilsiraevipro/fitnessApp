@@ -22,10 +22,6 @@ namespace fitnessApp.BL.Controller
             Eating = GetEating();
         }
 
-        public EatingController()
-        {
-        }
-
         public void Add(FoodItem food )
         {
             var product = Foods.SingleOrDefault(f => f.Name == food.Food.Name);

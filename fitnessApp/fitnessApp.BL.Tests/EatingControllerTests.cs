@@ -25,6 +25,9 @@ namespace fitnessApp.BL.Controller
             //Act
             eatingController.Add(foodItem);
 
+            //Asert
+            Assert.AreEqual(eatingController.Eating.Foods.First(), foodItem);
+
         }
     }
 }

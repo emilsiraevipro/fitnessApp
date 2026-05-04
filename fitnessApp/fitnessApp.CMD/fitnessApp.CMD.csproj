@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.ValueTuple" Version="4.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\fitnessApp.BL\fitnessApp.BL.csproj" />
   </ItemGroup>
 
