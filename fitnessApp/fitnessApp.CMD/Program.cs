@@ -33,32 +33,28 @@ namespace fitnessApp.CMD
             var key = Console.ReadKey();
             if(key.Key == ConsoleKey.E)
             {
-                var foods = EnterEAting();
-                eatingController.Add(foods);
+                var food = EnterEating();
+                eatingController.Add(food);
                 foreach (var item in eatingController.Eating.Foods)
                 { 
                     Console.WriteLine($"{item.Food} - {item.Weight}");
                 }
             }
-
             Console.ReadLine();
-
         }
 
-        private static FoodItem EnterEAting()
+        private static FoodItem EnterEating()
         {
-            Console.WriteLine("Введите имя продукта:");
-            var food = Console.ReadLine();
+            Console.WriteLine("\nВведите имя продукта:");
+            var foodName = Console.ReadLine();
 
             var calloriels = ParseDouble("калории");
             var proteins = ParseDouble("белки ");
             var fats = ParseDouble("жиры");
             var carbohydrates = ParseDouble("углеводы");
-
-
-            Console.WriteLine("Введите вес порции:");
             var weight = ParseDouble("вес порции");
-            var product = new Food(food, proteins, fats, carbohydrates, calloriels);
+
+            var product = new Food(foodName, proteins, fats, carbohydrates, calloriels);
 
             return new FoodItem(product, weight);
         }
@@ -85,14 +81,14 @@ namespace fitnessApp.CMD
         {
             while (true)
             {
-                Console.WriteLine($"Введите {name}а: ");
+                Console.WriteLine($"Введите {name}: ");
                 if (double.TryParse(Console.ReadLine(), out double value))
                 {
                     return value;
                 }
                 else
                 {
-                    Console.WriteLine($"Неверный формат поля {name}а!");
+                    Console.WriteLine($"Неверный формат поля {name}!");
                 }
             }
         }

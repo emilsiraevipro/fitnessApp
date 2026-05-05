@@ -11,15 +11,18 @@ namespace fitnessApp.BL.Controller
     {
         private const string FOODS_FILE_NAME = "foods.json";
         private const string EATINGS_FILE_NAME = "eatings.json";
+        private const string FOODITEMS_FILE_NAME = "fooditems.json";
         private readonly User user;
         public List<Food> Foods { get; }
         public Eating Eating { get;  }
+        public List<FoodItem> FoodItems { get; set; }
 
         public EatingController(User user)
         {
             this.user = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть пустым или NULL!");
             Foods = GetAllFoods();
             Eating = GetEating();
+            FoodItems = GetAllFoodItems();
         }
 
         public void Add(FoodItem food )
@@ -40,12 +43,16 @@ namespace fitnessApp.BL.Controller
 
         private Eating GetEating()
         {
-            return Load<Eating>(EATINGS_FILE_NAME) ?? new Eating(user);
+            return Load<Eating>(EATINGS_FILE_NAME) ?? new Eating(user, FoodItems);
         }
 
         private List<Food> GetAllFoods()
         {
-           return Load<List<Food>>(FOODS_FILE_NAME) ?? new List<Food>();
+            return Load<List<Food>>(FOODS_FILE_NAME) ?? new List<Food>();
+        }
+        private List<FoodItem> GetAllFoodItems()
+        {
+            return Load<List<FoodItem>>(FOODITEMS_FILE_NAME) ?? new List<FoodItem>();
         }
 
         private void Save()

@@ -1,12 +1,42 @@
 [
   {
-    "Name": "vfymzr",
+    "Name": "Антон",
+    "Gender": {
+      "Name": "мужской"
+    },
+    "BirthDate": "2000-12-12T00:00:00",
+    "Weight": 156,
+    "Height": 156,
+    "Age": 25
+  },
+  {
+    "Name": "Эмиль",
     "Gender": {
       "Name": "муж"
     },
     "BirthDate": "2000-12-12T00:00:00",
-    "Weight": 155,
-    "Height": 155,
+    "Weight": 156,
+    "Height": 156,
     "Age": 25
+  },
+  {
+    "Name": "вадим",
+    "Gender": {
+      "Name": "жен"
+    },
+    "BirthDate": "2009-12-12T00:00:00",
+    "Weight": 156,
+    "Height": 156,
+    "Age": 16
+  },
+  {
+    "Name": "Анна",
+    "Gender": {
+      "Name": "жен"
+    },
+    "BirthDate": "2001-12-10T00:00:00",
+    "Weight": 62,
+    "Height": 162,
+    "Age": 24
   }
 ]

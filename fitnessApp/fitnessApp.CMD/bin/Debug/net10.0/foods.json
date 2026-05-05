@@ -1,16 +1,30 @@
 [
   {
-    "Name": "яблоко",
-    "Proteins": 0.67,
-    "Fats": 0.67,
-    "Carbohydrates": 0.67,
-    "Calorries": 0.67
+    "Name": "Яблоко",
+    "Proteins": 1E-12,
+    "Fats": 1E-12,
+    "Carbohydrates": 1E-12,
+    "Calorries": 1E-12
   },
   {
-    "Name": "бдбд",
-    "Proteins": 0.78,
-    "Fats": 0.78,
-    "Carbohydrates": 0.78,
-    "Calorries": 0.78
+    "Name": "Apple",
+    "Proteins": 5E-10,
+    "Fats": 5E-10,
+    "Carbohydrates": 5E-10,
+    "Calorries": 5E-10
+  },
+  {
+    "Name": "манты",
+    "Proteins": 0.0001,
+    "Fats": 0.0001,
+    "Carbohydrates": 0.0001,
+    "Calorries": 0.0001
+  },
+  {
+    "Name": "Греча",
+    "Proteins": 0.04,
+    "Fats": 0.04,
+    "Carbohydrates": 0.04,
+    "Calorries": 0.04
   }
 ]

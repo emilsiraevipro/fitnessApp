@@ -1,26 +1,55 @@
 {
-  "Moment": "2026-05-04T21:51:07.2888375Z",
+  "Moment": "2026-05-05T21:52:56.6296356Z",
   "Foods": [
     {
       "Food": {
-        "Name": "бдбд",
-        "Proteins": 0.78,
-        "Fats": 0.78,
-        "Carbohydrates": 0.78,
-        "Calorries": 0.78
+        "Name": "Яблоко",
+        "Proteins": 1E-12,
+        "Fats": 1E-12,
+        "Carbohydrates": 1E-12,
+        "Calorries": 1E-12
       },
-      "Weight": 78
+      "Weight": 16
+    },
+    {
+      "Food": {
+        "Name": "Apple",
+        "Proteins": 5E-10,
+        "Fats": 5E-10,
+        "Carbohydrates": 5E-10,
+        "Calorries": 5E-10
+      },
+      "Weight": 5
+    },
+    {
+      "Food": {
+        "Name": "манты",
+        "Proteins": 0.0001,
+        "Fats": 0.0001,
+        "Carbohydrates": 0.0001,
+        "Calorries": 0.0001
+      },
+      "Weight": 1
+    },
+    {
+      "Food": {
+        "Name": "Греча",
+        "Proteins": 0.04,
+        "Fats": 0.04,
+        "Carbohydrates": 0.04,
+        "Calorries": 0.04
+      },
+      "Weight": 4
     }
   ],
   "User": {
-    "Name": "vfymzr",
+    "Name": "Антон",
     "Gender": {
-      "Name": "муж"
+      "Name": "мужской"
     },
     "BirthDate": "2000-12-12T00:00:00",
-    "Weight": 155,
-    "Height": 155,
+    "Weight": 156,
+    "Height": 156,
     "Age": 25
   }
-}}
 }

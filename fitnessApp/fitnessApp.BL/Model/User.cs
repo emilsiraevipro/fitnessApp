@@ -34,7 +34,8 @@ namespace fitnessApp.BL.Model
             } 
         }
         #endregion
-        
+
+        [JsonConstructor]
         public User(string name, 
                     Gender gender, 
                     DateTime birthDate, 
@@ -61,14 +62,13 @@ namespace fitnessApp.BL.Model
             BirthDate = birthDate;
             #endregion 
         }
-        [JsonConstructor]
         public User(string name)
         {
             if(string.IsNullOrWhiteSpace(name)) 
                 throw new ArgumentNullException(nameof(name), "НУЛЬ!!!!");
             Name = name;
         }
-        public User() { }
+        //public User() { }
 
         public override string ToString()
         {

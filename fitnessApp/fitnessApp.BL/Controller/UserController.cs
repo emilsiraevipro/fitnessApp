@@ -36,10 +36,6 @@ namespace fitnessApp.BL.Controller
             }
         }
 
-        public UserController()
-        {
-        }
-
         /// <summary>
         /// Получить сохраненный список пользователей
         /// </summary>

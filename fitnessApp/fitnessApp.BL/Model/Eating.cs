@@ -2,8 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
-namespace fitnessApp.BL.Tests
+namespace fitnessApp.BL
 {
     /// <summary>
     /// Прием пищи
@@ -11,8 +12,21 @@ namespace fitnessApp.BL.Tests
     public class Eating
     {
         public DateTime Moment { get; }
-        public List<FoodItem> Foods { get; }
+        public List<FoodItem> Foods { get; private set; } 
         public User User { get; }
+        public Eating(User user, DateTime moment, List<FoodItem> foods)
+        {
+            User = user ??  throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
+            Moment = moment;
+            Foods = foods ?? new List<FoodItem>();
+        }
+        [JsonConstructor]
+        public Eating(User user , List<FoodItem> foods)
+        {
+            User = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
+            Moment = DateTime.UtcNow;
+            Foods = foods ?? new List<FoodItem>();
+        }
         public Eating(User user)
         {
             User = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
@@ -22,7 +36,7 @@ namespace fitnessApp.BL.Tests
 
         public void Add(FoodItem food)
         {
-            var product = Foods.FirstOrDefault(f => f.Food.Name.Equals(food.Food.Name));
+            var product = Foods.SingleOrDefault(f => f.Food.Name.Equals(food.Food.Name));
 
             if (product == null)
             {

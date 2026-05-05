@@ -7,7 +7,7 @@ namespace fitnessApp.BL.Tests
 {
     public class Food
     {
-        public string Name { get; }
+        public string Name { get; set; }
         /// <summary>
         /// Белки
         /// </summary>
@@ -25,9 +25,10 @@ namespace fitnessApp.BL.Tests
         /// </summary>
         public double Calorries { get; set; }
 
-        [JsonConstructor]
         public Food(string name) : this(name,0.0,0.0,0.0,0.0){}
 
+
+        [JsonConstructor]
         public Food(string name, double proteins, double fats, double carbohydrates, double calorries)
         {
             Name = string.IsNullOrWhiteSpace(name) ? throw new ArgumentNullException(nameof(name), "Имя не может быть пустым") : name;
