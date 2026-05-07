@@ -68,12 +68,12 @@ namespace fitnessApp.CMD
                 }
         }
 
-        private static (ACtivity activity, DateTime begin, DateTime end) EnterExercise()
+        private static (Activity activity, DateTime begin, DateTime end) EnterExercise()
         {
             Console.Write("\nВведите имя упражнения:");
             var actName = Console.ReadLine();
             var calloriels = ParseDouble("калории");
-            var activity = new ACtivity(actName, calloriels);
+            var activity = new Activity(actName, calloriels);
 
             var begin = DateTime.Now;
             var end = DateTime.Now.AddHours(1);

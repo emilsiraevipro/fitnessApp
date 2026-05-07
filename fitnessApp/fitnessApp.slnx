@@ -2,4 +2,5 @@
   <Project Path="fitnessApp.BL.Tests/fitnessApp.BL.Tests.csproj" Id="3e7c5b74-6c46-430e-b4c4-ad6499a7b8de" />
   <Project Path="fitnessApp.BL/fitnessApp.BL.csproj" />
   <Project Path="fitnessApp.CMD/fitnessApp.CMD.csproj" />
+  <Project Path="Setup/Setup.vdproj" Type="Installer" />
 </Solution>

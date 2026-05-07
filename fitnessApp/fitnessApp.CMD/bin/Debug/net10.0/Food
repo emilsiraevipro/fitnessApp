@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 0,
+    "Name": "Яблоко",
+    "Proteins": 0.45,
+    "Fats": 0.45,
+    "Carbohydrates": 0.45,
+    "Calorries": 0.45
+  }
+]

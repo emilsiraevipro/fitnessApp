@@ -1,8 +1,8 @@
 ﻿namespace fitnessApp.BL.Controller
 {
-    public interface IDataSaver<T> where T : class
+    public interface IDataSaver 
     {
-        public void Save(T item);
-        public T Load( );
+        public void Save<T>(List<T> item) where T : class;
+        public List<T> Load<T>() where T: class;
     }
 }

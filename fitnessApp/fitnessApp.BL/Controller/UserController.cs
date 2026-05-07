@@ -11,9 +11,8 @@ namespace fitnessApp.BL.Controller
     /// <summary>
     /// Контроллер пользователя
     /// </summary>
-    public class UserController: ControllerBase
+    public class UserController: ControllerBase<User>
     {
-        private const string USERS_FILE_NAME = "users.json";
         /// <summary>
         /// Пользователь приложения
         /// </summary>
@@ -43,7 +42,7 @@ namespace fitnessApp.BL.Controller
         /// <exception cref="FileLoadException"></exception>
         private List<User> GetUsersData()
         {
-            return Load<List<User>>(USERS_FILE_NAME) ?? new List<User>();
+            return Load<User>() ?? new List<User>();
         }
 
         public void SetNewUserData(string genderName, DateTime birthDate, double weight = 1, double height = 1)
@@ -61,7 +60,7 @@ namespace fitnessApp.BL.Controller
         /// </summary>
         public void Save()
         {
-            Save(USERS_FILE_NAME, Users);
+            Save(Users);
         }
     }
 }

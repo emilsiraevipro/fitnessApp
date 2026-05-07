@@ -19,7 +19,7 @@ namespace fitnessApp.BL.Controller
             var rnd = new Random();
             var userController = new UserController(userName);
             var exerciseController = new ExerciseController(userController.CurrentUser);
-            var activity = new ACtivity(activityName, rnd.Next(50, 500));
+            var activity = new Activity(activityName, rnd.Next(50, 500));
             //Act
             exerciseController.Add((activity, DateTime.Now, DateTime.Now.AddHours(1)));
 

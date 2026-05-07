@@ -5,10 +5,8 @@ using System.Text.Json;
 
 namespace fitnessApp.BL.Controller
 {
-    public class EatingController: ControllerBase
+    public class EatingController: ControllerBase<Eating>
     {
-        private const string FOODS_FILE_NAME = "foods.json";
-        private const string EATINGS_FILE_NAME = "eatings.json";
         private readonly User user;
         public List<Food> Foods { get; }
         public Eating Eating { get;  }
@@ -38,21 +36,23 @@ namespace fitnessApp.BL.Controller
 
         private Eating GetEating()
         {
-            Eating eating = Load<Eating>(EATINGS_FILE_NAME);
-
+            Eating eating = Load<Eating>().FirstOrDefault();
+            if(eating != null)
+            {
             if (eating.User == user) { return eating; }
-            else return new Eating(user);
+            }
+            return new Eating(user);
         }
 
         private List<Food> GetAllFoods()
         {
-            return Load<List<Food>>(FOODS_FILE_NAME) ?? new List<Food>();
+            return Load<Food>() ?? new List<Food>();
         }
 
         private void Save()
         {
-            Save(FOODS_FILE_NAME, Foods);
-            Save(EATINGS_FILE_NAME, Eating);
+            Save(Foods);
+            Save(new List<Eating>());
         }
     }
 }

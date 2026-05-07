@@ -8,6 +8,7 @@ namespace fitnessApp.BL.Model
 {
     public class FoodItem
     {
+        public int Id { get; set; }
         public Food Food { get; set; }
         public double Weight { get; set; }
         //public FoodItem() { },.llZZZZZZZZZZZ 
@@ -21,7 +22,6 @@ namespace fitnessApp.BL.Model
         //public FoodItem(Food food) : this(food, 0) {}
         public FoodItem()
         {
-                
         }
     }
 }

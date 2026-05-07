@@ -5,13 +5,11 @@ using System.Diagnostics;
 
 namespace fitnessApp.BL.Controller
 {
-    public class ExerciseController: ControllerBase
+    public class ExerciseController: ControllerBase<Exercise> 
     {
-        public const string EXERCISES_FILE_NAME = "exercises.json";
-        public const string ACTIVITIES_FILE_NAME = "ectivities.json";
         private User user;
         public List<Exercise> Exercises { get; }
-        public List<ACtivity> Activities { get; }
+        public List<Model.Activity> Activities { get; }
         public ExerciseController(User user)
         {
             this.user = user ?? throw new ArgumentNullException(nameof(user), "Имя не может быть пустым");
@@ -19,17 +17,17 @@ namespace fitnessApp.BL.Controller
             Activities = GetAllActivities();
         }
 
-        private List<ACtivity>? GetAllActivities()
+        private List<Model.Activity>? GetAllActivities()
         {
-            return Load<List<ACtivity>>(ACTIVITIES_FILE_NAME) ?? new List<ACtivity>();
+            return Load<Model.Activity>() ?? new List<Model.Activity>();
         }
 
         private List<Exercise> GetAllExercises()
         {
-            return Load<List<Exercise>>(EXERCISES_FILE_NAME) ?? new List<Exercise>();
+            return Load<Exercise>() ?? new List<Exercise>();
         }
 
-        public void Add((ACtivity activity, DateTime begin, DateTime end) actTuple)
+        public void Add((Model.Activity activity, DateTime begin, DateTime end) actTuple)
         {
             var act = Activities.SingleOrDefault(a => a.Name == actTuple.activity.Name);
             if(act == null)
@@ -50,8 +48,8 @@ namespace fitnessApp.BL.Controller
 
         private void Save()
         {
-            Save(EXERCISES_FILE_NAME, Exercises);
-            Save(ACTIVITIES_FILE_NAME, Activities);
+            Save(Exercises);
+            Save(Activities);
         }
     }
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 0,
+    "Start": "2026-05-08T00:12:56.3474277+03:00",
+    "Finish": "2026-05-08T01:12:56.347434+03:00",
+    "Activity": {
+      "Id": 0,
+      "Name": "БЕГ",
+      "Exercises": null,
+      "CaloriesPerMinute": 56
+    },
+    "User": {
+      "Id": 0,
+      "Name": "аннучч",
+      "Gender": {
+        "Id": 0,
+        "Name": null
+      },
+      "BirthDate": "2000-12-12T00:00:00",
+      "Weight": 175,
+      "Height": 144,
+      "Age": 25
+    },
+    "ActivityId": 0,
+    "UserId": 0
+  }
+]

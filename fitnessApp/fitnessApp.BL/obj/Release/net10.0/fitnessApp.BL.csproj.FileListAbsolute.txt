@@ -1,0 +1,15 @@
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\bin\Release\net10.0\fitnessApp.BL.deps.json
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\bin\Release\net10.0\fitnessApp.BL.runtimeconfig.json
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\bin\Release\net10.0\fitnessApp.BL.dll
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\bin\Release\net10.0\fitnessApp.BL.pdb
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.csproj.AssemblyReference.cache
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.AssemblyInfoInputs.cache
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.AssemblyInfo.cs
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.csproj.CoreCompileInputs.cache
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.sourcelink.json
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.dll
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\refint\fitnessApp.BL.dll
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.pdb
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\fitnessApp.BL.genruntimeconfig.cache
+C:\Users\Эмиль\Desktop\fitnessApp\fitnessApp\fitnessApp.BL\obj\Release\net10.0\ref\fitnessApp.BL.dll

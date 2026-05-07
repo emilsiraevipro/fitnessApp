@@ -10,7 +10,7 @@ namespace fitnessApp.BL.Controller
 {
     public class FitnessContext: DbContext
     {
-        public DbSet<ACtivity> ACtivities { get; set; }
+        public DbSet<Activity> ACtivities { get; set; }
         public DbSet<Eating> Eatings { get; set; }
         public DbSet<Exercise> Exercises { get; set; }
         public DbSet<Food> Foods { get; set; }

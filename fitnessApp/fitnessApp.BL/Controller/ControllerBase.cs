@@ -1,24 +1,15 @@
-﻿using fitnessApp.BL.Model;
-using fitnessApp.BL.Tests;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Encodings.Web;
-using System.Text.Json;
-using System.Text.Unicode;
-
-namespace fitnessApp.BL.Controller
+﻿namespace fitnessApp.BL.Controller
 {
-    public abstract class ControllerBase
+    public abstract class ControllerBase<T> where T : class
     {
-        protected IDataSaver saver = new DatabasaeDataSaver();
-        protected void Save<T>(string fileName, T obj)
+        private readonly IDataSaver _manager = new DatabaseSaver();
+        protected void Save<T>(List<T> item) where T: class
         {
-            saver.Save(fileName, obj);
+            _manager.Save(item);
         }
-        protected T Load<T>(string fileName) where T: class 
+        protected List<T> Load<T>() where T: class
         {
-            return saver.Load<T>(fileName);
+            return _manager.Load<T>();
         }
     }
 }

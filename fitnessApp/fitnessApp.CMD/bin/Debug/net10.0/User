@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 0,
+    "Name": "Эмилькка",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Id": 0,
+    "Name": "диана",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Id": 0,
+    "Name": "аннучч",
+    "Gender": {
+      "Id": 0,
+      "Name": "муж"
+    },
+    "BirthDate": "2000-12-12T00:00:00",
+    "Weight": 175,
+    "Height": 144,
+    "Age": 25
+  }
+]
