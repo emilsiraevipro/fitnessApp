@@ -1,55 +1,25 @@
 {
-  "Moment": "2026-05-05T21:52:56.6296356Z",
+  "Moment": "2026-05-06T17:23:57.5088899Z",
   "Foods": [
     {
       "Food": {
-        "Name": "Яблоко",
-        "Proteins": 1E-12,
-        "Fats": 1E-12,
-        "Carbohydrates": 1E-12,
-        "Calorries": 1E-12
+        "Name": "ЧЕПСИКИ",
+        "Proteins": 0.07,
+        "Fats": 0.07,
+        "Carbohydrates": 0.07,
+        "Calorries": 0.07
       },
-      "Weight": 16
-    },
-    {
-      "Food": {
-        "Name": "Apple",
-        "Proteins": 5E-10,
-        "Fats": 5E-10,
-        "Carbohydrates": 5E-10,
-        "Calorries": 5E-10
-      },
-      "Weight": 5
-    },
-    {
-      "Food": {
-        "Name": "манты",
-        "Proteins": 0.0001,
-        "Fats": 0.0001,
-        "Carbohydrates": 0.0001,
-        "Calorries": 0.0001
-      },
-      "Weight": 1
-    },
-    {
-      "Food": {
-        "Name": "Греча",
-        "Proteins": 0.04,
-        "Fats": 0.04,
-        "Carbohydrates": 0.04,
-        "Calorries": 0.04
-      },
-      "Weight": 4
+      "Weight": 7
     }
   ],
   "User": {
-    "Name": "Антон",
+    "Name": "вадимка",
     "Gender": {
-      "Name": "мужской"
+      "Name": "муж"
     },
-    "BirthDate": "2000-12-12T00:00:00",
-    "Weight": 156,
-    "Height": 156,
-    "Age": 25
+    "BirthDate": "2002-12-12T00:00:00",
+    "Weight": 43,
+    "Height": 43,
+    "Age": 23
   }
 }

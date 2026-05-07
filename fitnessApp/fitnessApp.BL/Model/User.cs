@@ -10,8 +10,9 @@ namespace fitnessApp.BL.Model
     /// </summary>
     public class User
     {
+        public int Id { get; set; }
         #region Набор свойств.
-        public string Name { get; } // установка через readonly(без set)
+        public string Name { get; set; } // установка через readonly(без set)
         /// <summary>
         /// Пол.
         /// </summary>
@@ -35,11 +36,10 @@ namespace fitnessApp.BL.Model
         }
         #endregion
 
-        [JsonConstructor]
-        public User(string name, 
-                    Gender gender, 
-                    DateTime birthDate, 
-                    double weight, 
+        public User(string name,
+                    Gender gender,
+                    DateTime birthDate,
+                    double weight,
                     double height)
         {
             #region Проверка значений на корректность.
@@ -62,13 +62,29 @@ namespace fitnessApp.BL.Model
             BirthDate = birthDate;
             #endregion 
         }
+        [JsonConstructor]
+        public User(string name,
+                    Gender gender,
+                    DateTime birthDate,
+                    double weight
+                     )
+        {
+            #region Проверка значений на корректность.
+            #endregion
+            #region Присваивание значений.
+            Name = name;
+            Gender = gender;
+            Weight = weight;
+            BirthDate = birthDate;
+            #endregion 
+        }
         public User(string name)
         {
             if(string.IsNullOrWhiteSpace(name)) 
                 throw new ArgumentNullException(nameof(name), "НУЛЬ!!!!");
             Name = name;
         }
-        //public User() { }
+        public User() { }
 
         public override string ToString()
         {

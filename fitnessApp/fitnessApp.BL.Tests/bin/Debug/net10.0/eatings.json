@@ -1,19 +1,19 @@
 {
-  "Moment": "2026-05-04T21:16:50.8043879Z",
+  "Moment": "2026-05-06T18:43:04.2592086Z",
   "Foods": [
     {
       "Food": {
-        "Name": "cb697aa6-53f6-4c57-9df0-97eedb1ef47f",
-        "Proteins": 4.61,
-        "Fats": 0.58,
-        "Carbohydrates": 1.93,
-        "Calorries": 1.69
+        "Name": "7574b05e-042e-42e0-90d2-c18e2d0916d3",
+        "Proteins": 2.54,
+        "Fats": 2.93,
+        "Carbohydrates": 0.88,
+        "Calorries": 2.84
       },
       "Weight": 100
     }
   ],
   "User": {
-    "Name": "56c7b230-2cfe-4eba-aad6-8540cd2a3972",
+    "Name": "0b1f70b6-f0ec-45d9-b265-5df77d2ba2d4",
     "Gender": null,
     "BirthDate": "0001-01-01T00:00:00",
     "Weight": 0,

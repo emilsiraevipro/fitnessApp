@@ -1,0 +1,18 @@
+[
+  {
+    "Start": "2026-05-06T22:35:15.3613221+03:00",
+    "Finish": "2026-05-06T23:35:15.3613229+03:00",
+    "Activity": {
+      "Name": "95342f71-cf58-44ae-be82-f01d7a5877e8",
+      "CaloriesPerMinute": 228
+    },
+    "User": {
+      "Name": "ab8da3d8-5b7b-4db3-a49f-9522ff0c8836",
+      "Gender": null,
+      "BirthDate": "0001-01-01T00:00:00",
+      "Weight": 0,
+      "Height": 0,
+      "Age": 2025
+    }
+  }
+]

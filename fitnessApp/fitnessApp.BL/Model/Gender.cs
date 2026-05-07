@@ -10,6 +10,7 @@ namespace fitnessApp.BL.Model
     /// </summary>
     public class Gender
     {
+        public int Id { get; set; }
         public string Name { get; }
         public Gender(string name)
         {
@@ -20,6 +21,10 @@ namespace fitnessApp.BL.Model
         public override string ToString()
         {
             return Name;
+        }
+        public Gender()
+        {
+            
         }
     }
 }

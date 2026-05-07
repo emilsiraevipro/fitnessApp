@@ -10,7 +10,7 @@ namespace fitnessApp.BL.Model
     {
         public Food Food { get; set; }
         public double Weight { get; set; }
-        //public FoodItem() { }
+        //public FoodItem() { },.llZZZZZZZZZZZ 
 
         [JsonConstructor]
         public FoodItem(Food food, double weight)
@@ -19,5 +19,9 @@ namespace fitnessApp.BL.Model
             Weight = weight;
         }
         //public FoodItem(Food food) : this(food, 0) {}
+        public FoodItem()
+        {
+                
+        }
     }
 }

@@ -11,22 +11,25 @@ namespace fitnessApp.BL
     /// </summary>
     public class Eating
     {
+        public int UserId { get; set; }
+        public int Id { get; set; }
         public DateTime Moment { get; }
-        public List<FoodItem> Foods { get; private set; } 
-        public User User { get; }
+        public List<FoodItem> Foods { get;  set; } 
+        public virtual User User { get; set; }
         public Eating(User user, DateTime moment, List<FoodItem> foods)
         {
             User = user ??  throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
             Moment = moment;
             Foods = foods ?? new List<FoodItem>();
         }
-        [JsonConstructor]
+        public Eating() { }
         public Eating(User user , List<FoodItem> foods)
         {
             User = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");
             Moment = DateTime.UtcNow;
             Foods = foods ?? new List<FoodItem>();
         }
+        [JsonConstructor]
         public Eating(User user)
         {
             User = user ?? throw new ArgumentNullException(nameof(user), "Пользователь не может быть NULL");

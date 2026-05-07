@@ -1,12 +1,12 @@
 [
   {
-    "Name": "Антон",
+    "Name": "Вова",
     "Gender": {
-      "Name": "мужской"
+      "Name": "муж"
     },
     "BirthDate": "2000-12-12T00:00:00",
-    "Weight": 156,
-    "Height": 156,
+    "Weight": 55,
+    "Height": 55,
     "Age": 25
   },
   {
@@ -14,29 +14,65 @@
     "Gender": {
       "Name": "муж"
     },
+    "BirthDate": "2005-10-12T00:00:00",
+    "Weight": 73,
+    "Height": 173,
+    "Age": 20
+  },
+  {
+    "Name": "Роман",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Name": "ромчик",
+    "Gender": {
+      "Name": "муж"
+    },
     "BirthDate": "2000-12-12T00:00:00",
-    "Weight": 156,
-    "Height": 156,
+    "Weight": 55,
+    "Height": 233,
     "Age": 25
   },
   {
-    "Name": "вадим",
+    "Name": "Марина",
     "Gender": {
       "Name": "жен"
     },
-    "BirthDate": "2009-12-12T00:00:00",
-    "Weight": 156,
-    "Height": 156,
-    "Age": 16
+    "BirthDate": "2000-12-12T00:00:00",
+    "Weight": 144,
+    "Height": 144,
+    "Age": 25
   },
   {
-    "Name": "Анна",
+    "Name": "Анночка",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Name": "вадимка",
+    "Gender": {
+      "Name": "муж"
+    },
+    "BirthDate": "2002-12-12T00:00:00",
+    "Weight": 43,
+    "Height": 43,
+    "Age": 23
+  },
+  {
+    "Name": "Ма",
     "Gender": {
       "Name": "жен"
     },
-    "BirthDate": "2001-12-10T00:00:00",
-    "Weight": 62,
-    "Height": 162,
-    "Age": 24
+    "BirthDate": "2000-12-12T00:00:00",
+    "Weight": 223,
+    "Height": 233,
+    "Age": 25
   }
 ]

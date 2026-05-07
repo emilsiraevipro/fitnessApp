@@ -1,6 +1,11 @@
 ﻿using fitnessApp.BL.Controller;
 using fitnessApp.BL.Model;
 using fitnessApp.BL.Tests;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 
 namespace fitnessApp.CMD
 {
@@ -8,13 +13,16 @@ namespace fitnessApp.CMD
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Вас приветствует приложение fitnessApp");
 
-            Console.WriteLine("Введите имя пользователя");
+
+            Console.WriteLine("Здравствуйте");
+            Console.WriteLine("-------------------------");
+            Console.Write("Введите ваше имя:");
             var name = Console.ReadLine();
 
             var userController = new UserController(name);
             var eatingController = new EatingController(userController.CurrentUser);
+            var exerciseController = new ExerciseController(userController.CurrentUser);
             if (userController.IsNewUser)
             {
                 Console.WriteLine("Введите пол:");
@@ -27,20 +35,50 @@ namespace fitnessApp.CMD
             }
 
             Console.WriteLine(userController.CurrentUser);
-
-            Console.WriteLine("Что вы хотите сделать?");
-            Console.WriteLine("E - ввести прием пищи");
-            var key = Console.ReadKey();
-            if(key.Key == ConsoleKey.E)
+            while (true)
             {
-                var food = EnterEating();
-                eatingController.Add(food);
-                foreach (var item in eatingController.Eating.Foods)
-                { 
-                    Console.WriteLine($"{item.Food} - {item.Weight}");
+                Console.WriteLine("Что вы хотите сделать?");
+                Console.WriteLine("E - ввести прием пищи");
+                Console.WriteLine("A - ввести упражнение");
+                Console.WriteLine("Q - выход из");
+                var key = Console.ReadKey();
+                switch(key.Key)
+                {
+                    case ConsoleKey.E:
+                        var food = EnterEating();
+                        eatingController.Add(food);
+                        foreach (var item in eatingController.Eating.Foods)
+                        {
+                            Console.WriteLine($"{item.Food} - {item.Weight}");
+                        }
+                        break;
+                    case ConsoleKey.A:
+                        var activities = EnterExercise();
+                        exerciseController.Add(activities);
+                        foreach (var item in exerciseController.Exercises)
+                        {
+                            Console.WriteLine($"{item.Activity} - {item.Start.ToShortTimeString()} до {item.Finish.ToShortTimeString()}");
+                        }
+                        break;
+                    case ConsoleKey.Q:
+                        Environment.Exit(0);
+                        break;
                 }
-            }
-            Console.ReadLine();
+                Console.ReadLine();
+                }
+        }
+
+        private static (ACtivity activity, DateTime begin, DateTime end) EnterExercise()
+        {
+            Console.Write("\nВведите имя упражнения:");
+            var actName = Console.ReadLine();
+            var calloriels = ParseDouble("калории");
+            var activity = new ACtivity(actName, calloriels);
+
+            var begin = DateTime.Now;
+            var end = DateTime.Now.AddHours(1);
+
+            return ( activity,  begin,  end);
         }
 
         private static FoodItem EnterEating()

@@ -7,6 +7,7 @@ namespace fitnessApp.BL.Tests
 {
     public class Food
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         /// <summary>
         /// Белки
@@ -40,6 +41,10 @@ namespace fitnessApp.BL.Tests
         public override string ToString()
         {
             return Name;
+        }
+        public Food()
+        {
+            
         }
     }
 }

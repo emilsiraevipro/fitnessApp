@@ -67,10 +67,44 @@
     "BirthDate": "2008-05-05T00:16:50.7724523+04:00",
     "Weight": 90,
     "Height": 190,
-    "Age": 17
+    "Age": 18
   },
   {
     "Name": "673fb376-b246-49c2-99c1-e41aaff9f580",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Name": "d2952ad3-731b-466d-be4e-51869c050880",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Name": "4c112b8f-c889-4b5f-8352-2c8403a1ad00",
+    "Gender": {
+      "Name": "man"
+    },
+    "BirthDate": "2008-05-06T21:43:04.214073+04:00",
+    "Weight": 90,
+    "Height": 190,
+    "Age": 17
+  },
+  {
+    "Name": "0b1f70b6-f0ec-45d9-b265-5df77d2ba2d4",
+    "Gender": null,
+    "BirthDate": "0001-01-01T00:00:00",
+    "Weight": 0,
+    "Height": 0,
+    "Age": 2025
+  },
+  {
+    "Name": "ab8da3d8-5b7b-4db3-a49f-9522ff0c8836",
     "Gender": null,
     "BirthDate": "0001-01-01T00:00:00",
     "Weight": 0,
